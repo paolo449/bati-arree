@@ -1,0 +1,204 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Bati.Arrée – Maçonnerie neuf et rénovation à Botmeur (Finistère)</title>
+<meta name="description" content="Bati.Arrée, maçon à Botmeur dans les Monts d'Arrée : maçonnerie, construction neuve et rénovation dans le Finistère. Appelez le 06 79 15 05 37.">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Bitter:wght@600;800&family=Work+Sans:wght@400;500;600&display=swap" rel="stylesheet">
+<script type="application/ld+json">
+{"@context":"https://schema.org","@type":"HomeAndConstructionBusiness","name":"Bati.Arrée","description":"Maçonnerie, construction neuve et rénovation","telephone":"+33679150537","address":{"@type":"PostalAddress","streetAddress":"Kernevez","postalCode":"29690","addressLocality":"Botmeur","addressCountry":"FR"}}
+</script>
+<style>
+:root{
+  --schiste:#23282b;
+  --schiste-2:#363d41;
+  --granit:#e9ebe8;
+  --blanc:#fafaf8;
+  --lichen:#5f7452;
+  --ajonc:#e3b11d;
+  --texte:#1d2124;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:'Work Sans',system-ui,sans-serif;color:var(--texte);background:var(--blanc);line-height:1.6;font-size:17px}
+h1,h2,h3{font-family:'Bitter',Georgia,serif;line-height:1.15;color:var(--schiste)}
+a{color:inherit}
+:focus-visible{outline:3px solid var(--ajonc);outline-offset:3px}
+img{display:block;width:100%;height:100%;object-fit:cover}
+.wrap{max-width:1100px;margin:0 auto;padding:0 22px}
+
+header{position:fixed;top:0;left:0;right:0;z-index:20;background:rgba(35,40,43,.95);backdrop-filter:blur(6px)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:66px}
+.logo{font-family:'Bitter',serif;font-weight:800;font-size:1.35rem;color:#fff;text-decoration:none}
+nav ul{display:flex;gap:26px;list-style:none;align-items:center}
+nav a{color:#e9ebe8;text-decoration:none;font-weight:500}
+nav a:hover{color:var(--ajonc)}
+.btn{display:inline-block;padding:13px 24px;border-radius:4px;font-weight:600;text-decoration:none;border:2px solid var(--ajonc);background:var(--ajonc);color:var(--schiste);transition:background .2s,color .2s}
+.btn:hover{background:transparent;color:var(--ajonc)}
+.btn.clair{background:transparent;color:#fff;border-color:#fff}
+.btn.clair:hover{background:#fff;color:var(--schiste)}
+nav .btn{padding:8px 16px;color:var(--schiste)}
+nav .btn:hover{color:var(--ajonc)}
+#burger{display:none;background:none;border:0;color:#fff;font-size:1.9rem;cursor:pointer}
+
+.hero{position:relative;min-height:100vh;display:flex;align-items:flex-end;background:var(--schiste-2);color:#fff;padding:0}
+.hero .fond{position:absolute;inset:0}
+.hero .fond::after{content:"";position:absolute;inset:0;background:linear-gradient(to top,rgba(20,24,26,.92) 15%,rgba(20,24,26,.4) 70%)}
+.hero .wrap{position:relative;padding-bottom:84px;padding-top:120px}
+.hero h1{color:#fff;font-size:clamp(2.3rem,6.5vw,4.6rem);font-weight:800;max-width:15ch}
+.hero p{max-width:46ch;margin:22px 0 32px;font-size:1.15rem;color:#e9ebe8}
+.hero .actions{display:flex;flex-wrap:wrap;gap:14px}
+
+section{padding:88px 0}
+.titre{font-size:clamp(1.8rem,4vw,2.7rem);font-weight:800;margin-bottom:14px}
+.intro{max-width:60ch;margin-bottom:44px;color:#444b50}
+.apropos{background:var(--granit)}
+.apropos .wrap{display:grid;grid-template-columns:1.1fr 1fr;gap:48px;align-items:center}
+.apropos .photo{aspect-ratio:4/3;background:var(--schiste-2);border-radius:4px;overflow:hidden}
+.apropos ul{margin-top:20px;list-style:none}
+.apropos li{padding:10px 0 10px 28px;border-top:1px solid #c5c9c4;position:relative}
+.apropos li::before{content:"";position:absolute;left:0;top:19px;width:14px;height:8px;background:var(--lichen)}
+
+.services{display:grid;grid-template-columns:repeat(auto-fit,minmax(300px,1fr));gap:26px}
+.service{background:#fff;border:1px solid #dcdfdb}
+.service .photo{aspect-ratio:3/2;background:var(--schiste-2);overflow:hidden}
+.service .txt{padding:20px 22px 26px}
+.service h3{font-size:1.25rem;margin-bottom:6px}
+.service p{color:#444b50;font-size:.97rem}
+
+.realisations{background:var(--schiste);color:#fff}
+.realisations .titre{color:#fff}
+.realisations .intro{color:#c9ceca}
+.galerie{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.galerie button{border:0;padding:0;cursor:zoom-in;aspect-ratio:4/3;background:var(--schiste-2);overflow:hidden}
+.galerie button:hover img{transform:scale(1.04)}
+.galerie img{transition:transform .35s}
+#zoom{position:fixed;inset:0;background:rgba(10,12,13,.93);display:none;align-items:center;justify-content:center;z-index:50;padding:20px;cursor:zoom-out}
+#zoom.ouvert{display:flex}
+#zoom img{width:auto;height:auto;max-width:100%;max-height:100%;object-fit:contain}
+
+.contact .wrap{display:grid;grid-template-columns:1fr 1fr;gap:48px}
+.coord{font-size:1.1rem}
+.coord p{margin-bottom:14px}
+.tel{font-family:'Bitter',serif;font-weight:800;font-size:clamp(1.9rem,5vw,2.8rem);color:var(--schiste);text-decoration:none;display:block;margin:6px 0 20px}
+.tel:hover{color:var(--lichen)}
+.boutons{display:flex;flex-wrap:wrap;gap:12px;margin-top:8px}
+.btn.fonce{background:var(--schiste);border-color:var(--schiste);color:#fff}
+.btn.fonce:hover{background:transparent;color:var(--schiste)}
+.carte{background:var(--granit);padding:34px;border-left:6px solid var(--ajonc)}
+.carte h3{margin-bottom:10px}
+
+footer{background:var(--schiste);color:#c9ceca;padding:34px 0;font-size:.95rem}
+footer .wrap{display:flex;flex-wrap:wrap;gap:12px 40px;justify-content:space-between}
+footer a{color:#fff}
+
+#appel{display:none}
+
+@media(max-width:820px){
+  nav ul{display:none;position:absolute;top:66px;left:0;right:0;background:var(--schiste);flex-direction:column;padding:20px 22px 26px;gap:18px;align-items:flex-start}
+  nav ul.ouvert{display:flex}
+  #burger{display:block}
+  .apropos .wrap,.contact .wrap{grid-template-columns:1fr}
+  .galerie{grid-template-columns:repeat(2,1fr)}
+  section{padding:64px 0}
+  body{padding-bottom:64px}
+  #appel{display:block;position:fixed;left:0;right:0;bottom:0;z-index:30;background:var(--ajonc);color:var(--schiste);text-align:center;font-weight:600;padding:18px;text-decoration:none;font-size:1.05rem}
+}
+@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*{transition:none!important}}
+</style>
+</head>
+<body>
+
+<header>
+  <div class="wrap nav">
+    <a class="logo" href="#accueil">Bati.Arrée</a>
+    <nav aria-label="Menu principal">
+      <ul id="menu">
+        <li><a href="#accueil">Accueil</a></li>
+        <li><a href="#services">Services</a></li>
+        <li><a href="#realisations">Photos</a></li>
+        <li><a href="#contact">Contact</a></li>
+        <li><a class="btn" href="tel:0679150537">06 79 15 05 37</a></li>
+      </ul>
+    </nav>
+    <button id="burger" aria-label="Ouvrir le menu" aria-expanded="false">☰</button>
+  </div>
+</header>
+
+<main>
+<section class="hero" id="accueil">
+  <div class="fond"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Limestone_rubble_wall_with_brick_quoins.jpg?width=1600" alt="Mur en pierre avec angles en brique" fetchpriority="high"></div>
+  <div class="wrap">
+    <h1>Maçonnerie neuf et rénovation</h1>
+    <p>Bati.Arrée construit, agrandit et rénove vos murs à Botmeur, dans les Monts d'Arrée et partout autour dans le Finistère.</p>
+    <div class="actions">
+      <a class="btn" href="tel:0679150537">Appeler le 06 79 15 05 37</a>
+      <a class="btn clair" href="#contact">Demander un devis</a>
+    </div>
+  </div>
+</section>
+
+<section class="apropos">
+  <div class="wrap">
+    <div>
+      <h2 class="titre">Un maçon près de chez vous</h2>
+      <p>Bati.Arrée réalise vos travaux de maçonnerie, du gros œuvre aux finitions, pour une maison neuve comme pour un bâtiment à rénover.</p>
+      <ul>
+        <li>Construction neuve et rénovation</li>
+        <li>Travail de la pierre, de la brique et du parpaing</li>
+        <li>Intervention à Botmeur et dans les environs</li>
+      </ul>
+    </div>
+    <div class="photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dry_Stone_wall_building.JPG?width=900" alt="Construction d'un mur en pierre sèche" loading="lazy"></div>
+  </div>
+</section>
+
+<section id="services">
+  <div class="wrap">
+    <h2 class="titre">Nos travaux de maçonnerie</h2>
+    <p class="intro">Petits ou grands chantiers : décrivez-nous votre projet par téléphone, nous vous répondons.</p>
+    <div class="services">
+      <article class="service"><div class="photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/A_brick_wall_made_of_bricks_of_different_sizes.jpg?width=800" alt="Mur en briques" loading="lazy"></div><div class="txt"><h3>Maison neuve</h3><p>Fondations, murs, dalles : la construction de votre maison côté maçonnerie.</p></div></article>
+      <article class="service"><div class="photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Fancy_brickwork,_Newtown_-_geograph.org.uk_-_554451.jpg?width=800" alt="Briques apparentes" loading="lazy"></div><div class="txt"><h3>Extension</h3><p>Plus de place chez vous : agrandissement, pièce en plus.</p></div></article>
+      <article class="service"><div class="photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/A_brick_wall_destroyed_by_erosion_from_dampness.jpg?width=800" alt="Mur abîmé par l'humidité" loading="lazy"></div><div class="txt"><h3>Rénovation</h3><p>Remise en état de vieux murs, reprise de structure, transformation d'un bâtiment.</p></div></article>
+      <article class="service"><div class="photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Masonry_Rubble_Wall.jpg?width=800" alt="Mur en pierres" loading="lazy"></div><div class="txt"><h3>Murs et murets en pierre</h3><p>Montage et réparation de murs en pierre, murets de jardin et clôtures.</p></div></article>
+      <article class="service"><div class="photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Defective-pointing.jpg?width=800" alt="Joints de mur à refaire" loading="lazy"></div><div class="txt"><h3>Jointoiement et ouvertures</h3><p>Joints refaits, création ou agrandissement de portes et de fenêtres dans vos murs.</p></div></article>
+      <article class="service"><div class="photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pebbledashing.jpg?width=800" alt="Façade avec enduit" loading="lazy"></div><div class="txt"><h3>Enduits et façades</h3><p>Enduits, ravalement, finitions pour une façade propre et durable.</p></div></article>
+    </div>
+  </div>
+</section>
+
+<section class="realisations" id="realisations">
+  <div class="wrap">
+    <h2 class="titre">Pierre, brique et enduit</h2>
+    <p class="intro">Quelques exemples de maçonnerie. Cliquez sur une photo pour l'agrandir.</p>
+    <div class="galerie">
+      <button aria-label="Agrandir la photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Limestone_rubble_wall_with_brick_quoins.jpg?width=900" alt="Mur en pierre" loading="lazy"></button>
+      <button aria-label="Agrandir la photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Dry_Stone_wall_building.JPG?width=900" alt="Mur en pierre sèche" loading="lazy"></button>
+      <button aria-label="Agrandir la photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Ismaili_Centre,_Burnaby,_exterior_stone_detail.jpg?width=900" alt="Détail de pierre" loading="lazy"></button>
+      <button aria-label="Agrandir la photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Great_wall_of_china_stonework.jpg?width=900" alt="Maçonnerie en pierre" loading="lazy"></button>
+      <button aria-label="Agrandir la photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Decorated_masonry_wall_in_Armenian_Quarter_of_Jerusalem.jpg?width=900" alt="Mur en pierre travaillée" loading="lazy"></button>
+      <button aria-label="Agrandir la photo"><img src="https://commons.wikimedia.org/wiki/Special:FilePath/Pebbledashing.jpg?width=900" alt="Enduit de façade" loading="lazy"></button>
+    </div>
+  </div>
+</section>
+
+<section class="contact" id="contact">
+  <div class="wrap">
+    <div class="coord">
+      <h2 class="titre">Parlons de votre projet</h2>
+      <p>Le plus simple : appelez-nous.</p>
+      <a class="tel" href="tel:0679150537">06 79 15 05 37</a>
+      <p>Bati.Arrée<br>Kernevez<br>29690 Botmeur</p>
+      <div class="boutons">
+        <a class="btn fonce" href="tel:0679150537">Appeler</a>
+        <a class="btn fonce" href="sms:0679150537?body=Bonjour, je voudrais un devis pour des travaux de maçonnerie.">Envoyer un SMS</a>
+        <a class="btn fonce" href="https://www.google.com/maps/search/?api=1&query=Kernevez+29690+Botmeur" target="_blank" rel="noopener">Voir sur la carte</a>
+      </div>
+    </div>
+    <div class="carte">
+      <h3>Zone d'intervention</h3>
+      <p>Botmeur et les alentours (MORLAIX, CARHAIX, CHATEAULIN et LANDERNEAU)
