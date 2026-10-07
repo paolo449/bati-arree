@@ -1,5 +1,6 @@
 {
-  "dependencies": {
-    "astro": "^7.3.6"
-  }
+  "name": "bati-arret-site",
+  "version": "1.0.0",
+  "scripts": {},
+  "dépendencies": {}
 }
